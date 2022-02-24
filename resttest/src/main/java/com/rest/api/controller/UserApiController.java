@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.rest.entity.User;
+import com.rest.exception.DuplicateException;
 import com.rest.exception.UserNotSavedException;
 import com.rest.service.UserService;
 
@@ -19,7 +20,7 @@ public class UserApiController {
 	
 	
 	@PostMapping(value="/saveUser",consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_NDJSON_VALUE)
-	@ExceptionHandler(value = UserNotSavedException.class)
+	@ExceptionHandler(value = {UserNotSavedException.class, DuplicateException.class} )
 	public String saveUser(@RequestBody User user) {
 		
 		String result = userService.saveUser(user);

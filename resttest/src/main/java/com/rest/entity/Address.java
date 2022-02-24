@@ -5,12 +5,16 @@ import javax.persistence.Embedded;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Embeddable
+@Getter
+@Setter
 public class Address {
 	protected String street;
 	protected String suite;

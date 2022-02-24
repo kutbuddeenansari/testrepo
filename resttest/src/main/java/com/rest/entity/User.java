@@ -1,5 +1,6 @@
 package com.rest.entity;
 
+import javax.persistence.Column;
 import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -27,16 +28,20 @@ import lombok.Setter;
 public class User {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(unique = true, nullable = false)
 	protected Long id;
-	@NonNull 
+	
+	
 	protected String name;
-	@NonNull
-	protected String userName;
-	@NonNull
+	@Column(name="user_nm",unique = true, nullable = false)
+	protected String username;
+	
+	@Column(unique = true, nullable = false)
 	protected String email;
 	@Embedded
 	protected Address address;
-	@NonNull 
+	
+	@Column(unique = true, nullable = false)
 	protected String phone;
 	protected String website;
 	@Embedded

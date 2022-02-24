@@ -1,0 +1,43 @@
+{
+
+    "name": "KD", 
+
+   "username": "kdansari", 
+
+   "email": "kdansari@gmail.com", 
+
+   "address": { 
+
+       "street": "2nd Street", 
+
+       "suite": "5th floor", 
+
+       "city": "Lucknow", 
+
+       "zipcode": "226026", 
+
+       "geo": { 
+
+           "lat": "189.9.0", 
+
+           "lng": "898.90" 
+
+       } 
+
+   }, 
+
+   "phone": "9098989878", 
+
+   "website": "ww.test.com", 
+
+   "company": { 
+
+       "cname": "Testify", 
+
+       "catchPhrase": "catch Pahase", 
+
+       "bs": "bs"
+
+   } 
+
+} 
